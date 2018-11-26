@@ -20,8 +20,4 @@ public class Time extends Bot{
 	public void lancer(){
 		System.out.println(this.msg);
 	}
-	
-	public void lancer(String msg){
-		System.out.println(this.msg);
-	}
 }

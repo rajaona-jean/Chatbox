@@ -1,4 +1,6 @@
 package gestion.chatbot;
+import java.io.IOException;
+
 import gestion.*;
 
 public class Hello extends Bot{
@@ -16,6 +18,11 @@ public class Hello extends Bot{
 	}
 	
 	public void lancer(String msg){
-		System.out.println(this.msg);
+	}
+
+	@Override
+	public void lancer_req() throws IOException {
+		// TODO Auto-generated method stub
+		
 	}
 }

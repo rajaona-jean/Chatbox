@@ -2,26 +2,25 @@ package gestion.chatbot;
 import java.io.*;
 import java.net.*;
 import gestion.*;
+import org.json.JSONObject;
 
 public class Icnb extends Bot{
 
 	private String msg;
 	
 	public Icnb() {
-		
+		super();
 	}
 	
-	public void lancer(){
+	public void lancer() throws IOException{
 		Icnb response = new Icnb();
-		this.msg = response.get("http://www.icndb.com/api/");
+		this.msg = response.get("http://www.icndb.com/api/jokes/random?firstName=Chuck&amp;lastName=Norris");
 		System.out.println(this.msg);
 	}
-	
-	public void lancer(String msg){
-	}
+
 	
 	public String get(String url)throws IOException {
-		String msg = "";
+		JASONObject msg = new JASONObject();
 		URL request = new URL(url);
 		URLConnection co = request.openConnection();
 		BufferedReader in = new BufferedReader(

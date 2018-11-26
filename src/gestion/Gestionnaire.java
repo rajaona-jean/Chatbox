@@ -1,10 +1,12 @@
 package gestion;
+import java.io.IOException;
+
 import gestion.chatbot.*;
 
 public class Gestionnaire{
-	private int taille = 3;
+	private int taille = 4;
 	private Bot tabl[] = new Bot[this.taille];
-	
+
 
 	public Gestionnaire(String user_name){
 		Bot Unknown = new Unknown();
@@ -16,10 +18,11 @@ public class Gestionnaire{
 		time.set_name("time");
 		this.tabl[2] = time;
 		Bot icnb = new Icnb();
-		time.set_name("Icnb");
+		icnb.set_name("icnb");
 		this.tabl[3] = icnb;
+	}
 
-	public void start(String msg){
+	public void start(String msg) throws IOException{
 		int i = 0;
 		short find = 0;
 		String bot_name;
@@ -32,7 +35,7 @@ public class Gestionnaire{
 			i++;
 		}
 		if(find == 0) {
-			tabl[0].lancer(msg);
+			tabl[0].lancer();
 		}
 
 
