@@ -1,6 +1,4 @@
 package gestion;
-import java.io.IOException;
-
 import gestion.chatbot.*;
 
 public class Gestionnaire{
@@ -22,7 +20,7 @@ public class Gestionnaire{
 		this.tabl[3] = icnb;
 	}
 
-	public void start(String msg) throws IOException{
+	public void start(String msg) throws BotInvalide{
 		int i = 0;
 		short find = 0;
 		String bot_name;

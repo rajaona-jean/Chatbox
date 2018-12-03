@@ -1,7 +1,5 @@
 package gestion;
 
-import java.io.IOException;
-
 public abstract class Bot extends Saisie{
 	private String bot_name;
 	
@@ -17,6 +15,6 @@ public abstract class Bot extends Saisie{
 		return bot_name;
 	}
 	
-	public abstract void lancer() throws IOException;
+	public abstract void lancer() throws BotInvalide;
 	
 }

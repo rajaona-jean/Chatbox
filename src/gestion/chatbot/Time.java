@@ -14,7 +14,7 @@ public class Time extends Bot{
 		Date now = new Date();
 		this.date = new SimpleDateFormat("EEEE dd MMMM");
 		this.time = new SimpleDateFormat("kk:mm");
-		this.msg = "[hello] Nous sommes "+this.date.format(now)+" et il est "+this.time.format(now)+".";
+		this.msg = "[time] Nous sommes "+this.date.format(now)+" et il est "+this.time.format(now)+".";
 	}
 	
 	public void lancer(){

@@ -9,7 +9,7 @@ public class Unknown extends Bot{
 	}
 	
 	public void lancer(){
-		System.out.println("[system] Je ne connais pas de bot "+Saisie.msg+" !");
+		System.out.println("[system] Je ne connais pas de bot "+Saisie.saisie.get()+" !");
 	}
 	
 
