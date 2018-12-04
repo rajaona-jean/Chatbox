@@ -41,7 +41,6 @@ public class Saisie {
 	}
 	
 	public String get2() {
-		String msg2 = this.msg.substring(this.msg.indexOf(" ")).trim();
-		return msg2;
+		return arg;
 	}
 }

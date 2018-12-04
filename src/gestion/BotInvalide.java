@@ -8,10 +8,12 @@ public class BotInvalide extends Exception{
 		super();
 	}
 		
-	public BotInvalide(NumberFormatException e) {
+	public BotInvalide(String botname) {
 		super();
-		this.msg = Saisie.saisie.get2();
-		System.out.println("[system] Je ne sais pas quoi faire avec "+this.msg+" !");	
+		if(botname.equals("icnb")) {
+			this.msg = Saisie.saisie.get2();
+			System.out.println("[system] Je ne sais pas quoi faire avec "+this.msg+" !");	
+		}
 
 	}
 

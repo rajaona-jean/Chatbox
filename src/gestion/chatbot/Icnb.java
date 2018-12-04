@@ -17,15 +17,21 @@ public class Icnb extends Bot{
 	public void lancer() throws BotInvalide{
 		int i;
 		Icnb response = new Icnb();
-		i = saisie.getint();
-		String rep = response.get("http://api.icndb.com/jokes/random/"+i);
-		JSONObject tables = new JSONObject(rep);
-		JSONArray table = tables.getJSONArray("value");
-		for (i=0;i<table.length();i++) {
-			JSONObject joke = table.getJSONObject(i);
-			this.msg = joke.getString("joke");
-			System.out.println("[icndb] "+ this.msg);
+		try {
+			i = saisie.getint();
+			String rep = response.get("http://api.icndb.com/jokes/random/"+i);
+			JSONObject tables = new JSONObject(rep);
+			JSONArray table = tables.getJSONArray("value");
+			for (i=0;i<table.length();i++) {
+				JSONObject joke = table.getJSONObject(i);
+				this.msg = joke.getString("joke");
+				System.out.println("[icndb] "+ this.msg);
+			}
 		}
+		catch(NumberFormatException e) {
+			new BotInvalide(Saisie.saisie.get().substring(1));
+		}
+	
 	}
 
 
