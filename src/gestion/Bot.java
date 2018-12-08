@@ -1,18 +1,21 @@
 package gestion;
 
+import gestion.base.BotInvalide;
+import gestion.base.Saisie;
+
 public abstract class Bot extends Saisie{
-	private String bot_name;
-	
+	private String botName;
+		
 	public Bot(){
-		this.bot_name = "system";
+		this.botName = "system";
 	}
 		
-	public void set_name(String nom){
-		this.bot_name = nom;
+	public void setName(String nom){
+		this.botName = nom;
 	}
 	
 	public String name(){
-		return bot_name;
+		return botName;
 	}
 	
 	public abstract void lancer() throws BotInvalide;

@@ -18,6 +18,6 @@ public class Time extends Bot{
 	}
 	
 	public void lancer(){
-		System.out.println(this.msg);
+		prompt.shown(this.msg);
 	}
 }

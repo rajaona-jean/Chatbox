@@ -1,8 +1,9 @@
 package gestion;
+import gestion.base.BotInvalide;
 import gestion.chatbot.*;
 
 public class Gestionnaire{
-	private int taille = 4;
+	private int taille = 5;
 	private Bot tabl[] = new Bot[this.taille];
 
 
@@ -10,14 +11,17 @@ public class Gestionnaire{
 		Bot Unknown = new Unknown();
 		this.tabl[0]=Unknown;
 		Bot hello = new Hello(user_name);
-		hello.set_name("hello");
+		hello.setName("hello");
 		this.tabl[1] = hello;
 		Bot time = new Time();
-		time.set_name("time");
+		time.setName("time");
 		this.tabl[2] = time;
 		Bot icnb = new Icnb();
-		icnb.set_name("icnb");
+		icnb.setName("icnb");
 		this.tabl[3] = icnb;
+		Bot quiz = new Quiz();
+		quiz.setName("quiz");
+		this.tabl[4] = quiz;
 	}
 
 	public void start(String msg) throws BotInvalide{
